@@ -23,7 +23,7 @@ d.body("This manual describes how Sangala Mosaic is built, how its parts fit tog
 d.heading("1. Downloading and Installing")
 d.body("What is needed: a computer with a web browser. Nothing else, and nothing is installed.")
 d.body("The repository is obtained from GitHub:", before_list=True)
-d.code("https://github.com/GlenBull/SangalaMosaic")
+d.code("https://github.com/maketolearn/SangalaMosaic")
 d.body("The application is the single file SangalaMosaic.html, which runs by being opened in a "
        "browser. Two conveniences travel with it. Create Desktop Shortcut.cmd puts a turaco icon on "
        "the Desktop that opens the page, and Update SangalaMosaic.cmd fetches the current version "

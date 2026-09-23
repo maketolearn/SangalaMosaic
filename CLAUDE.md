@@ -129,7 +129,8 @@ date convention as Sangala Studio; bump it on any shipped change.
   folder, and pushing commits to this repo's GitHub once a remote exists. No need to ask.
 - **Always ask first:** anything outside this repo, system/account settings, creating the GitHub
   remote, and any history-losing git (force-push, hard reset dropping commits, branch deletion).
-- Remote is live: **https://github.com/GlenBull/SangalaMosaic** (public, branch `main`). Standing
+- Remote is live: **https://github.com/maketolearn/SangalaMosaic** (public, branch `main`;
+  transferred from `GlenBull` to the Make to Learn organization on 2026-09-23). Standing
   approval covers pushing to it.
 
 ## Publishing to Dropbox — part of committing, not a later step

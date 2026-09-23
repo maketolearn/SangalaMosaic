@@ -18,7 +18,7 @@ REM ==========================================================================
 setlocal
 cd /d "%~dp0"
 
-set "BASE=https://raw.githubusercontent.com/GlenBull/SangalaMosaic/main"
+set "BASE=https://raw.githubusercontent.com/maketolearn/SangalaMosaic/main"
 set "HTML=SangalaMosaic.html"
 set "ICO=Turaco.ico"
 set "TMPHTML=SangalaMosaic.html.new"
