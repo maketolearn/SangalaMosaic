@@ -143,12 +143,16 @@ left behind there is the version they actually get. `Update SangalaMosaic.cmd` p
 NOT excuse it — that serves only a tester who runs the updater. Mosaic sat at `.93` in Dropbox while
 this repository moved to `.102` on exactly that mistaken reasoning.
 
-**The tool is `tools\sangala_publish.py` IN THE SILHOUETTE TOOLS REPO** (it covers all three
-applications from one place). Report, fix, confirm:
-
-    python "D:\Code Projects\Silhouette Tools	ools\sangala_publish.py"
-    python "D:\Code Projects\Silhouette Tools	ools\sangala_publish.py" --publish Mosaic
-    python "D:\Code Projects\Silhouette Tools	ools\sangala_publish.py"
+**Publishing is done by GitHub, not by anyone's computer (Jo, 2026-09-24: "Nothing should be done
+directly from Glen's machine anymore. It should all be done from Github").** Every push to `main` runs
+`.github/workflows/release.yml`, which calls the shared steps in maketolearn/SangalaStudio
+(`.github/workflows/sangala-release.yml`): if the exe's source changed it rebuilds the exe on a Windows
+machine and commits it to `main`, then `tools/sangala_publish.py` copies whatever is stale into Dropbox
+through the Dropbox API and checks again. Watch it on the repository's Actions tab; "Run workflow" there
+runs it by hand. It checks the page by hash AND by its own version marker, the exe by hash, the helper
+`.cmd` files by normalized content, the Studio and Blocks zips, and for Blocks every LDraw part the parts
+list needs. The version marker still has to be raised by hand for testers' updaters to fetch a change -
+the workflow warns when the exe's source changed without it.
 
 **Documents go there too, and without being asked:** a new version of a document about Mosaic is copied
 into that same folder and the version it supersedes is moved into the folder's own `Archive`, so the
